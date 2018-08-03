@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "iphone": "react-native run-ios --device",
+    "build-iphone": "react-native run-ios --configuration Release --device",
     "test": "jest"
   },
   "dependencies": {
