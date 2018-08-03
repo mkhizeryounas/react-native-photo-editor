@@ -20,6 +20,6 @@ RCT_EXPORT_METHOD(openEditor) {
 @end
 
 @interface RCT_EXTERN_MODULE(PhotoSwift, UIViewController)
-RCT_EXTERN_METHOD(addEvent)
+RCT_EXTERN_METHOD(addEvent:(NSString *)image)
 
 @end

@@ -11,15 +11,17 @@ import iOSPhotoEditor
 @objc(PhotoSwift)
 class PhotoSwift: UIViewController {
   
-  @objc
-  func addEvent() -> Void {
+  @objc(addEvent:)
+  func addEvent(image: String) -> Void {
 //    let picker = UIImagePickerController()
 //    picker.delegate = self
 //    picker.sourceType = .photoLibrary
 //    let top = topMostController ()
 //    top.present(picker, animated: true, completion: nil)
-    
-    triggerEditer(img: UIImage(named: "bg.jpg")!)
+    let url = URL(string: image)
+    let data = try? Data(contentsOf: url!)
+    let imgData = UIImage(data: data!)
+    triggerEditer(img: imgData!)
   }
   
   func topMostController() -> UIViewController {

@@ -8,5 +8,6 @@ target 'editor' do
   # Pods for editor
   pod 'iOSPhotoEditor'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
 end
