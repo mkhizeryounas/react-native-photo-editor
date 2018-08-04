@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, NativeModules, Alert } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  NativeModules,
+  Alert,
+  ActivityIndicator
+} from "react-native";
 
 import {
   Title,
@@ -15,8 +22,6 @@ import {
   Image,
   Caption
 } from "@shoutem/ui";
-import Axios from "../node_modules/axios";
-
 const http = require("axios");
 
 export default class Gallery extends Component {
@@ -32,8 +37,9 @@ export default class Gallery extends Component {
       cards: []
     };
   }
-  handleEdit(url) {
-    NativeModules.PhotoSwift.addEvent(url);
+  async handleEdit(url) {
+    await NativeModules.PhotoSwift.addEvent(url);
+    console.log("now good");
   }
 
   componentDidMount = () => {
@@ -41,6 +47,7 @@ export default class Gallery extends Component {
   };
 
   getData = async str => {
+    this.setState({ fetching: true });
     str = typeof str === "undefined" ? "" : str;
     let data = await http.get(
       `https://eid-cards-editor.firebaseio.com/${str}.json`
@@ -51,7 +58,7 @@ export default class Gallery extends Component {
       result.push({ url: data.data[d]["cardURL"] });
     }
     console.log(result);
-    this.setState({ cards: result });
+    this.setState({ cards: result, fetching: false });
   };
 
   renderRow = card => {
@@ -72,6 +79,23 @@ export default class Gallery extends Component {
   };
   render() {
     const cards = this.state.cards;
-    return <ListView data={cards} renderRow={this.renderRow} />;
+    return (
+      <View style={{ flex: 1 }}>
+        <ActivityIndicator
+          size="small"
+          color="#bdc3c7"
+          animating={this.state.fetching}
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            zIndex: 99
+          }}
+        />
+        <ListView data={cards} renderRow={this.renderRow} />
+      </View>
+    );
   }
 }

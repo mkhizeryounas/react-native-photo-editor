@@ -5,7 +5,8 @@ import {
   Text,
   NativeModules,
   Alert,
-  Share
+  Share,
+  ActivityIndicator
 } from "react-native";
 
 import {
@@ -100,6 +101,10 @@ export default class Home extends Component {
   };
   render() {
     const cards = this.state.cards;
-    return <ListView data={cards} renderRow={this.renderRow} />;
+    return (
+      <View style={{ flex: 1 }}>
+        <ListView data={cards} renderRow={this.renderRow} />
+      </View>
+    );
   }
 }
