@@ -23,6 +23,8 @@ import {
   Caption
 } from "@shoutem/ui";
 const http = require("axios");
+import OfflineNotice from "./OfflineNotice";
+import Toast from "react-native-simple-toast";
 
 export default class Gallery extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -37,9 +39,9 @@ export default class Gallery extends Component {
       cards: []
     };
   }
-  async handleEdit(url) {
-    await NativeModules.PhotoSwift.addEvent(url);
-    console.log("now good");
+  handleEdit(url) {
+    Toast.show("Preparing your photo, please wait...");
+    NativeModules.PhotoSwift.addEvent(url);
   }
 
   componentDidMount = () => {
@@ -81,6 +83,7 @@ export default class Gallery extends Component {
     const cards = this.state.cards;
     return (
       <View style={{ flex: 1 }}>
+        <OfflineNotice />
         <ActivityIndicator
           size="small"
           color="#bdc3c7"

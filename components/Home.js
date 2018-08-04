@@ -8,6 +8,7 @@ import {
   Share,
   ActivityIndicator
 } from "react-native";
+import OfflineNotice from "./OfflineNotice";
 
 import {
   Title,
@@ -103,6 +104,7 @@ export default class Home extends Component {
     const cards = this.state.cards;
     return (
       <View style={{ flex: 1 }}>
+        <OfflineNotice />
         <ListView data={cards} renderRow={this.renderRow} />
       </View>
     );
