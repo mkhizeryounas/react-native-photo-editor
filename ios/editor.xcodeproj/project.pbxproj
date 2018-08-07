@@ -23,6 +23,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		17B72CF12119D1BF00722985 /* logoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B72CC82119D1BF00722985 /* logoicon.png */; };
 		233B1BE76EC44EB1A7998CAD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC913AB82ED041A297FB4646 /* EvilIcons.ttf */; };
 		2595B05EF8B04A74BABF46F7 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE9E0DF7A68241199E0D975C /* Ionicons.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -388,6 +389,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = editor/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = editor/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		17B72CC82119D1BF00722985 /* logoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoicon.png; path = ../../../../Downloads/CustomGreetings/logoicon.png; sourceTree = "<group>"; };
 		24EFEDAC5EE44C0DBCD6D843 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* editor-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "editor-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* editor-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "editor-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -581,6 +583,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				D1D2DA7B2113C20500085B98 /* PhotoEditor.h */,
+				17B72CC82119D1BF00722985 /* logoicon.png */,
 				D1D2DA7C2113C20500085B98 /* PhotoEditor.m */,
 				D13365FD2113C5E200656BE4 /* PhotoSwift.swift */,
 				D13365FC2113C5E200656BE4 /* editor-Bridging-Header.h */,
@@ -874,7 +877,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 3MF5746W5U;
+						DevelopmentTeam = XZV96WL2GQ;
 						LastSwiftMigration = 940;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1269,6 +1272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				17B72CF12119D1BF00722985 /* logoicon.png in Resources */,
 				D13366002113CD4500656BE4 /* bg.jpg in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				E756B24EDB1749F9B12D2281 /* Entypo.ttf in Resources */,
@@ -1518,7 +1522,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 3MF5746W5U;
+				DEVELOPMENT_TEAM = XZV96WL2GQ;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
@@ -1548,7 +1552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3MF5746W5U;
+				DEVELOPMENT_TEAM = XZV96WL2GQ;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",

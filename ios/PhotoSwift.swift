@@ -38,9 +38,9 @@ class PhotoSwift: UIViewController {
     photoEditor.photoEditorDelegate = self
     photoEditor.image = img
 
-    //    for i in 0...10 {
-    //      photoEditor.stickers.append(UIImage(named: i.description )!)
-    //    }
+        for i in 2...9 {
+          photoEditor.stickers.append(UIImage(named: "sticker\(i.description)")!)
+        }
     DispatchQueue.main.async(execute: {
       if var topController = UIApplication.shared.keyWindow?.rootViewController {
         while let presentedViewController = topController.presentedViewController {

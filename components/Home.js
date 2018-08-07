@@ -68,6 +68,15 @@ export default class Home extends Component {
               "https://shoutem.github.io/static/getting-started/restaurant-2.jpg"
           },
           type: "backgrounds"
+        },
+        {
+          name: "Independence Day Cards",
+          sunheading: "Send Pre Made Independence Cards",
+          image: {
+            url:
+              "https://shoutem.github.io/static/getting-started/restaurant-3.jpg"
+          },
+          type: "indcards"
         }
       ]
     };
